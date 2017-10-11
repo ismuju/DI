@@ -38,16 +38,112 @@
         word-wrap: break-word;
         margin-left: auto;
         margin-right: auto;
+        background-image: url('blue.jpg');
+        background-repeat: repeat-x;
+        color:white;
+        border-color: white;
       }
 
-  
+      a.enlace {
+        margin: 1em 0;
+        float: left;
+        clear: left;
+      }
+
+      .pdf {
+        color: #E37529;
+        padding: 0 0 0 28px;
+        background:url(pdf.png) no-repeat left center;
+        background-size: 18px 20px;
+
+      }
+
+      body{
+        background-image: url('fondo.jpg');
+      }
+
+      table,tr,td{
+        align-self: center;
+        border: 2px solid black;
+        border-collapse: collapse;
+        color: black;
+        padding: 2px;
+        text-align: center;
+
+      }
+
+      tr:nth-child(even){
+        background-color: rgb(163, 163, 163);
+      }
+
+      tr:nth-child(odd){
+        background-color: white;
+      }
+
+      td.css{
+        text-align: right;
+        background:url(css3.png) no-repeat left;
+        background-size: 25px 25px;
+        width: 50px;
+        height: 35px;
+      }
+
+      td.html{
+        background:url(html5.png) no-repeat left center;
+        background-size: 25px 25px;
+        text-align: right;
+        width: 50px;
+        height: 35px;
+      }
+
+      td.bottom{
+        vertical-align: bottom;
+      }
+
+      caption.leyenda{
+        font-style: italic;
+        caption-side: bottom;
+        text-align: left;
+        color: black;
+        font-size: 0.9em;
+      }
+
+      .html:hover,.css:hover{
+        background-color: #FFFF66;
+      }
 
     </style>
   </head>
   <body>
     <h1>Ejercicio 2 diseño de esternocleidomastoideo</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <a href="#">ENLACE</a>
+    <a class="enlace" href="#">ENLACE</a>
+    <a class="pdf" href="#">Enlace a un documento PDF</a><br><br><br><br><br>
+    <center>
+      <table>
+        <caption class="leyenda">Esta es la leyenda de la tabla</caption>
+        <tr>
+          <td colspan=2>Bloques</td>
+        </tr>
+        <tr>
+          <td>Unidad 1</td><td>Planificación de interfaces</td>
+        </tr>
+        <tr>
+          <td>Unidad 2</td><td>Uso de estilos</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="css"><a href="#">CSS</a></td><td class="bottom">CSS2</td>
+        </tr>
+        <tr>
+          <td class="bottom">CSS3</td>
+        </tr>
+        <tr>
+          <td class="html"><a href="#">HTML</a></td><td class="bottom">HTML5</td>
+        </tr>
+      </table>
+    </center>
+
+
 
   </body>
 </html>
