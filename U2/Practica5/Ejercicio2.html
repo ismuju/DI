@@ -11,11 +11,13 @@
 
       input{
         padding-left: 10px;
+        border-radius: 5px;
       }
 
       input:focus{
         border: 1px solid violet;
         outline: none;
+        background-color: lightgrey;
       }
 
       div label{
@@ -38,7 +40,27 @@
 
       textarea {
         overflow: scroll;
+        height: 40px;
       }
+
+      div.copiaForo label {
+        width: 100%;
+      }
+
+      div.notificacionEventos label {
+        width: 100%;
+      }
+
+      div.nota p{
+        padding: 4px;
+        border: 1px solid black;
+        font-style: italic;
+      }
+
+      div.enviar input {
+        margin-top: 7px;
+      }
+
 
     </style>
 
@@ -53,17 +75,17 @@
 
           <div class="nombre">
             <label for="nombre">Nombre*:</label>
-            <input type="text" name="nombre" id="nombre" required="required" autofocus="autofocus"/>
+            <input type="text" name="nombre" id="nombre" required="required" autofocus="autofocus" placeholder="Introduce el nombre.."/>
           </div>
 
           <div class="apellidos">
             <label for="apellidos">Apellidos*:</label>
-            <input type="text" name="apellidos" id="apellidos"  required="required"/>
+            <input type="text" name="apellidos" id="apellidos"  required="required" placeholder="Introduce los apellidos.."/>
           </div>
 
           <div class="email">
             <label for="email">Email*:</label>
-            <input type="email" name="email" id="email"  required="required"/>
+            <input type="email" name="email" id="email"  required="required" placeholder="Introduce el email.."/>
           </div>
 
 
@@ -86,34 +108,35 @@
             <select name="provincia" id="provincia" >
               <option value="castellon" selected="selected" disabled="disabled">Escoge provincia</option>
               <option value="castellon">Castellón</option>
-              <option value="alicante">Alicante</option>
               <option value="valencia">Valencia</option>
+              <option value="alicante">Alicante</option>
+
             </select>
           </div>
 
 
           <div class="poblacion">
             <label for="poblacion">Poblacion:</label>
-            <input type="text" name="poblacion" id="poblacion"/>
+            <input type="text" name="poblacion" id="poblacion"  placeholder="Introduce la población.."/>
           </div>
 
 
           <div class="telefono">
             <label for="telefono">Teléfono:</label>
-            <input type="tel" name="telefono" id="telefono"/>
+            <input type="tel" name="telefono" id="telefono" placeholder="Introduce el teléfono.."/>
           </div>
 
 
           <div class="inscripcion">
             <label for="inscipcion">Motivo de inscripción:</label>
             <div class="area">
-              <textarea rows="2" cols="120" name="inscripcion" id="inscripcion"/></textarea>
+              <textarea cols="100" name="inscripcion" id="inscripcion"  placeholder="Introduce el motivo.."/></textarea>
             </div>
         </div>
 
 
         <div class="avatar">
-          <label for="avatar">Escoge el color de tu avatar:</label>
+          <label>Escoge el color de tu avatar:</label>
           <input type="color" name="avatar" id="avatar"/>
         </div>
 
@@ -124,22 +147,42 @@
 
           <div class="usuario">
             <label for="usuario">Nombre de usuario*</label>
-            <input type="text" name="usuario" id="usuario" required="required"/>
+            <input type="text" name="usuario" id="usuario" required="required" placeholder="Introduce el usuario.."/>
           </div>
 
           <div class="password">
             <label for="password">Contraseña*</label>
-            <input type="password" name="password" id="password"  required="required" maxlength="8" size="10">
+            <input type="password" name="password" id="password"  required="required" maxlength="8" size="10" placeholder="Contraseña..">
           </div>
-
 
           <div class="passwordcheck">
             <label for="password">Repite contraseña*</label>
-            <input type="password" name="passwordcheck" id="passwordcheck"  required="required" maxlength="8" size="10">
+            <input type="password" name="passwordcheck" id="passwordcheck"  required="required" maxlength="8" size="10" placeholder="Repite..">
           </div>
-
-
         </fieldset>
+
+        <div class="copiaForo">
+          <label for="copiaForo">
+            <input type="checkbox" name="copiaForo" id="copiaForo">Deseo recibir copias de los mensajes del foro en mi correo electrónico.
+          </label>
+        </div>
+
+        <div class="notificacionEventos">
+          <label for="notificacionEventos">
+            <input type="checkbox" name="notificacionEventos" id="notificacionEventos">Deseo recibir notificaciones de próximos eventos en mi correo electrónico.
+          </label>
+        </div>
+
+        <div class="enviar">
+          <input type="submit" name="enviar" id="enviar" value="Confirmar registro">
+        </div>
+
+
+        <div class="nota">
+          <p>Nota: los campos marcados con "*" son obligatorios.</p>
+        </div>
+
+
       </form>
     </fieldset>
   </body>
