@@ -4,10 +4,86 @@
     <meta charset="utf-8">
     <title>Ejemplo Layout Fijo</title>
     <style media="screen">
-      
+      /*RESETEO DE CAJAS*/
+      *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      header {
+        background-color: lightblue;
+        display: table;
+        width: 100%;
+      }
+
+      .logo{
+        display: table-cell;
+      }
+
+      .corporativo, .menuprincipal{
+        display: table-row;
+        width: 100%;
+      }
+
+      .corporativo>h1{
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 32px, Verdana;
+      }
+
+      .logo>img{
+        width: 80px;
+        margin: 10px;
+      }
+
+
+
+
+      nav li{
+        display: inline-block;
+        padding: 10px;
+      }
+
+      .container{
+        background-color: lightyellow;
+      }
+
+      footer{
+        background-color: lightblue;
+      }
+
+
     </style>
   </head>
   <body>
+    <header>
+      <div class="corporativo">
 
+
+      <div class="logo">
+          <img src="imagen.png" alt="logo">
+      </div>
+      <h1>Esto es la cabecera</h1>
+    </div>
+    <div class="menuprincipal">
+      <nav>
+        <ul>
+          <li><a href="#">Elemento 1</a></li>
+          <li><a href="#">Elemento 2</a></li>
+          <li><a href="#">Elemento 3</a></li>
+        </ul>
+      </nav>
+    </div>
+    </header>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </div>
+    <footer>
+      <hr>
+      <h1>Esto es el pie</h1>
+
+    </footer>
   </body>
 </html>
