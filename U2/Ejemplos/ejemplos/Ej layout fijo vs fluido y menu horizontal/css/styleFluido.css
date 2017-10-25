@@ -11,7 +11,9 @@ body{
 
 .container{
   margin: auto;
-  width: 960px;
+  /*width: 960px;*/
+  width: 100%;
+  max-width: 960px;
 }
 
 /*Cabecera*/
@@ -40,7 +42,7 @@ h1 {
   vertical-align: middle;
   background-color:lightblue;
   text-transform: capitalize;
-  font: bold 32px Helvetica, sans-serif;
+  font: bold 2em Helvetica, sans-serif;
 }
 
 /*Barra menú horizontal*/
@@ -54,7 +56,7 @@ h1 {
   clear:both;
   */
   width:960px;
-  padding: 5px;
+  padding: 0.5%;
 }
 /*Común a todos los menús*/
 li a{
@@ -66,7 +68,7 @@ li a{
 Formato primer nivel del menú*/
 div.menu > ul > li{
   list-style-type: none;
-  padding-left: 20px;
+  padding-left: 2%;
   display:inline-block;
   position:relative;
 }
@@ -86,8 +88,8 @@ Ponemos:
 .menu li:hover > ul{
   display: block;
   position: absolute;
-  width: 120px;
-  left: 5px;
+  width: 12.5%;
+  left: 2%;
   background-color: lightgray;
   border: 1px solid gray;
 }
@@ -107,13 +109,13 @@ Ponemos:
 }
 .nav{
   background-color: lightyellow;
-  width:192px;
+  width:20%;
   height: 400px;
   float:left;
-  padding: 5px;
+  padding: 0.52%;
 }
 .nav ul{
-  padding: 10px;
+  padding: 1%;
 }
 
 
@@ -137,11 +139,11 @@ si el ratón se pone encima
 /*Cuerpo: el div que sirve de contenedor*/
 /*Es flotante y con ancho %*/
 .cuerpo{
-  border-left: 5px solid yellow;
+  border-left: 0.52% solid yellow;
   text-align: justify;
-  padding:10px;
+  padding:1%;
   float:left;
-  width:768px;
+  width:80%;
   height: 400px;
 }
 
@@ -150,7 +152,7 @@ si el ratón se pone encima
 /*Impide que existan flotantes y con ancho %*/
 .footer{
   line-height: 150%;
-  width:960px;
+  width:100%;
   clear:both;
   background-color: gray;
   text-align: center;
