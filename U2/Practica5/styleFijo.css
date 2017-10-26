@@ -1,0 +1,19 @@
+body>header{
+  background-color: lightblue;
+}
+
+.container{
+  background-color: yellow;
+}
+
+body>footer{
+  background-color: lightblue;
+}
+
+aside{
+  background-color: lightgrey;
+}
+
+article{
+  background-color: orange;
+}
