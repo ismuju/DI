@@ -47,6 +47,7 @@ header nav {
   display: table-cell;
   padding-top: 1.7%;
   vertical-align: top;
+
 }
 
 header nav > ul{
@@ -77,6 +78,7 @@ header nav > ul > li > a{
 .container{
   padding-top: 140px;
   width: 100%;
+  max-width: 960px;
   padding-left: 3%;
   padding-right: 3%;
   margin-left: auto;
