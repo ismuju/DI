@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 3</title>
+    <!-- En la vista de móvil, debes evitar que el navegador cambie el tamaño del pixel. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+
+      }
+
+      .cabecera{
+        height: 60px;
+        font-style: italic;
+        border: 1px solid black;
+        padding: 0.6%;
+      }
+
+      .item{
+        border: 1px solid black;
+      }
+
+
+      .pie{
+        height: 40px;
+        font-style: italic;
+        padding: 0.5%;
+        border: 1px solid black;
+        background-color: yellow;
+      }
+
+
+
+
+
+
+      /** Cualquier tamaño **/
+      /* Cualquier elemento que tenga una clase que empieza por col- */
+      [class *= "col-"] {
+        float: left;
+      }
+
+      /********** Dispositivos grandes (LG) **********/
+      @media (min-width: 992px) and (max-width: 1200px) {
+        /* Aquí pongo el diseño para dispositivos grandes */
+        .col-lg-1 { width: 8.33%;}
+        .col-lg-2 { width: 16.66%;}
+        .col-lg-3 { width: 25%;}
+        .col-lg-4 { width: 33.33%;}
+        .col-lg-5 { width: 41.66%;}
+        .col-lg-6 { width: 50%;}
+        .col-lg-7 { width: 58.33%;}
+        .col-lg-8 { width: 66.66%;}
+        .col-lg-9 { width: 75%;}
+        .col-lg-10 { width: 83.33%;}
+        .col-lg-11 { width: 91.66%;}
+        .col-lg-12 { width: 100%;}
+
+        .cabecera {text-align: left; background-color: lime; font-size: 2em;}
+        .item { height: 400px; font-size: 10em; text-align: center; background-color: red}
+        .pie {font-size: 1.4em;}
+        .pie:nth-child(1) {text-align: right;}
+        .pie:nth-child(2) {text-align: left;}
+      }
+
+      /********** Dispositivos medios (MD) **********/
+      @media (min-width: 768px) and (max-width: 991px) {
+        /* Aquí pongo el diseño para dispositivos medios */
+        .col-md-1 { width: 8.33%;}
+        .col-md-2 { width: 16.66%;}
+        .col-md-3 { width: 25%;}
+        .col-md-4 { width: 33.33%;}
+        .col-md-5 { width: 41.66%;}
+        .col-md-6 { width: 50%;}
+        .col-md-7 { width: 58.33%;}
+        .col-md-8 { width: 66.66%;}
+        .col-md-9 { width: 75%;}
+        .col-md-10 { width: 83.33%;}
+        .col-md-11 { width: 91.66%;}
+        .col-md-12 { width: 100%;}
+        .none-md { display: none; }
+
+        .cabecera {text-align: left; background-color: lime; font-size: 2em;}
+        .item { height: 400px; font-size: 10em; text-align: center; background-color: red}
+        .pie {font-size: 1.4em;}
+        .pie:nth-child(1) {text-align: right;}
+        .pie:nth-child(2) {text-align: left;}
+      }
+
+
+      /********** Dispositivos pequeño (SM) **********/
+      @media (min-width: 576px) and (max-width: 767px) {
+        /* Aquí pongo el diseño para dispositivos pequeños */
+        .col-sm-1 { width: 8.33%;}
+        .col-sm-2 { width: 16.66%;}
+        .col-sm-3 { width: 25%;}
+        .col-sm-4 { width: 33.33%;}
+        .col-sm-5 { width: 41.66%;}
+        .col-sm-6 { width: 50%;}
+        .col-sm-7 { width: 58.33%;}
+        .col-sm-8 { width: 66.66%;}
+        .col-sm-9 { width: 75%;}
+        .col-sm-10 { width: 83.33%;}
+        .col-sm-11 { width: 91.66%;}
+        .col-sm-12 { width: 100%;}
+        .none-sm { display: none; }
+
+        .cabecera {text-align: left; background-color: cyan; font-size: 2em;}
+        .item { height: 200px; font-size: 6em; padding-top: 5%;}
+        .item:nth-child(1){text-align: left; background-color: red;}
+        .item:nth-child(2){text-align: right; background-color: red;}
+        .item:nth-child(3){text-align: center; height: 150px; background-color: lime;}
+        .pie { text-align: center; font-size: 1.4em;}
+      }
+
+      /********** Dispositivos extra pequeños (XS) **********/
+      @media (max-width: 575px) {
+        /* Aquí pongo el diseño para dispositivos extra pequeños */
+        .col-1 { width: 8.33%;}
+        .col-2 { width: 16.66%;}
+        .col-3 { width: 25%;}
+        .col-4 { width: 33.33%;}
+        .col-5 { width: 41.66%;}
+        .col-6 { width: 50%;}
+        .col-7 { width: 58.33%;}
+        .col-8 { width: 66.66%;}
+        .col-9 { width: 75%;}
+        .col-10 { width: 83.33%;}
+        .col-11 { width: 91.66%;}
+        .col-12 { width: 100%;}
+        .none { display: none; }
+
+        .cabecera {text-align: center; background-color: orange; font-size: 2em;}
+        .item { height: 150px; font-size: 5em; padding-top: 5%;}
+        .item:nth-child(1){background-color: red; text-align: left;}
+        .item:nth-child(2){background-color: cyan; text-align: center;}
+        .item:nth-child(3){background-color: red; text-align: right;}
+        .pie { text-align: center; font-size: 1.4em;}
+
+      }
+
+    </style>
+
+
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="cabecera col-lg-12 col-md-12 col-sm-12 col-12">Header</div>
+
+      <div class="row">
+        <div class="item col-lg-4 col-md-4 col-sm-6 col-12">1</div>
+        <div class="item col-lg-4 col-md-4 col-sm-6 none">2</div>
+        <div class="item col-lg-4 col-md-4 none-sm col-12">3</div>
+      </div>
+
+      <div class="footer">
+        <div class="pie col-lg-6 col-md-6 col-sm-12 col-12">Footer 1</div>
+        <div class="pie col-lg-6 col-md-6 col-sm-12 col-12">Footer 2</div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
