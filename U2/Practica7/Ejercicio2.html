@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Layout Bootstrap</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <style media="screen">
+      *{
+        margin-bottom: 2px;
+      }
+      .cabecera {
+        height: 60px;
+        background-color: lime;
+        border: 2px solid darkgrey;
+      }
+
+      .azul{
+        height: 75px;
+        background-color: lightblue;
+        border: 2px solid darkgrey;
+      }
+
+      .gris {
+        height: 75px;
+        background-color: lightgrey;
+        border: 2px solid darkgrey;
+      }
+
+      .azulClaro{
+        height: 60px;
+        background-color: cyan;
+        border: 2px solid darkgrey;
+      }
+
+      .naranja {
+        height: 75px;
+        background-color: orange;
+        border: 2px solid darkgrey;
+      }
+
+      .pie {
+        height: 40px;
+        background-color: lime;
+        border: 2px solid darkgrey;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <!--
+      c. Mediante el uso de Bootstrap, realiza la configuración que se propone:
+            i. Los elementos se disponen ocupando el 100% de la anchura del navegador
+            ii. Las cajas azules están en una única fila pero se ha aplicado offset y cambio de línea en el tamaño 1.
+            iii. Las cajas grises se han reordenado en el tamaño 1.
+            iv. La fila azul claro tiene 3 elementos distintos para Desktop, Tablet y Mobile que se muestran o no
+              dependiendo de la resolución.
+            v. En las cajas naranjas se aplica un offset en tamaño 1, reordenación en tamaño 2 y ocultación en tamaño 3.
+            vi. El pie desaparece en el tamaño 3
+
+      OPCIONAL:
+      Explora las utilidades que tiene Bootstrap para poner los colores de fondo (busca colores
+      parecidos), alinear el texto horizontalmente y cambiar el color del texto a blanco (salvo en el
+      caso de la caja gris), usando para ello únicamente clases de Bootstrap. Sube el resultado
+      como una página nueva -->
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="cabecera w-100">Header</div>
+        </div>
+        <div class="row">
+          <div class="azul col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">1</div>
+          <div class="azul col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">2</div>
+          <div class="azul col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">3</div>
+          <div class="azul col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">4</div>
+        </div>
+        <div class="row">
+          <div class="gris col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">a</div>
+          <div class="gris col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">b</div>
+          <div class="gris col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">c</div>
+          <div class="gris col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">d</div>
+        </div>
+        <div class="row">
+          <div class="azulClaro w-100">Desktop</div>
+        </div>
+        <div class="row">
+          <div class="naranja col-xl-3 col-lg-3 col-md-3 col-sm-6 d-none d-sm-block">:(</div>
+          <div class="naranja col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">:D</div>
+        </div>
+
+
+        <div class="row">
+          <div class="pie w-100">Footer</div>
+        </div>
+      </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
