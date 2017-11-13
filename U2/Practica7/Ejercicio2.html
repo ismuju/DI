@@ -14,37 +14,37 @@
       }
       .cabecera {
         height: 60px;
-        background-color: lime;
+        /*background-color: lime;*/
         border: 2px solid darkgrey;
       }
 
       .azul{
         height: 75px;
-        background-color: lightblue;
+        /*background-color: lightblue;*/
         border: 2px solid darkgrey;
       }
 
       .gris {
         height: 75px;
-        background-color: lightgrey;
+        /*background-color: lightgrey;*/
         border: 2px solid darkgrey;
       }
 
       .azulClaro{
         height: 60px;
-        background-color: cyan;
+        /*background-color: cyan;*/
         border: 2px solid darkgrey;
       }
 
       .naranja {
         height: 75px;
-        background-color: orange;
+        /*background-color: orange;*/
         border: 2px solid darkgrey;
       }
 
       .pie {
         height: 40px;
-        background-color: lime;
+        /*background-color: lime;*/
         border: 2px solid darkgrey;
       }
 
@@ -52,49 +52,43 @@
 
   </head>
   <body>
-    <!--
-      c. Mediante el uso de Bootstrap, realiza la configuración que se propone:
-            i. Los elementos se disponen ocupando el 100% de la anchura del navegador
-            ii. Las cajas azules están en una única fila pero se ha aplicado offset y cambio de línea en el tamaño 1.
-            iii. Las cajas grises se han reordenado en el tamaño 1.
-            iv. La fila azul claro tiene 3 elementos distintos para Desktop, Tablet y Mobile que se muestran o no
-              dependiendo de la resolución.
-            v. En las cajas naranjas se aplica un offset en tamaño 1, reordenación en tamaño 2 y ocultación en tamaño 3.
-            vi. El pie desaparece en el tamaño 3
-
-      OPCIONAL:
-      Explora las utilidades que tiene Bootstrap para poner los colores de fondo (busca colores
-      parecidos), alinear el texto horizontalmente y cambiar el color del texto a blanco (salvo en el
-      caso de la caja gris), usando para ello únicamente clases de Bootstrap. Sube el resultado
-      como una página nueva -->
 
       <div class="container-fluid">
         <div class="row">
-          <div class="cabecera w-100">Header</div>
+          <div class="cabecera text-white text-center w-100 bg-success">Header</div>
         </div>
         <div class="row">
-          <div class="azul col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">1</div>
-          <div class="azul col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">2</div>
-          <div class="azul col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">3</div>
-          <div class="azul col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">4</div>
+          <div class="azul text-white text-center bg-info col-xl-3 offset-xl-3 col-lg-3 offset-lg-3 col-md-3 offset-md-3 col-sm-3 col-6">1</div>
+          <div class="azul text-white text-center bg-info col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6">2</div>
+
+          <div class="w-100 d-none d-xl-block d-lg-block d-md-block"></div>
+
+          <div class="azul text-white text-center bg-info col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6">3</div>
+          <div class="azul text-white text-center bg-info col-xl-3 offset-xl-6 col-lg-3 offset-lg-6 col-md-3 offset-md-6 col-sm-3 col-6">4</div>
         </div>
         <div class="row">
-          <div class="gris col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">a</div>
-          <div class="gris col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">b</div>
-          <div class="gris col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">c</div>
-          <div class="gris col-xl-3 col-lg-3 col-md-3 col-sm-9 col-12">d</div>
+          <div class="azulClaro text-white text-center bg-primary w-100 d-none d-sm-block d-md-none">Tablet</div>
         </div>
         <div class="row">
-          <div class="azulClaro w-100">Desktop</div>
+          <div class="gris text-center bg-secondary col-xl-3 order-xl-4 col-lg-3 order-lg-4 col-md-3 order-md-4 col-sm-3 col-6">a</div>
+          <div class="gris text-center bg-secondary col-xl-3 order-xl-3 col-lg-3 order-lg-3 col-md-3 order-md-3 col-sm-3 col-6">b</div>
+          <div class="gris text-center bg-secondary col-xl-3 order-xl-2 col-lg-3 order-lg-2 col-md-3 order-md-2 col-sm-3 col-6">c</div>
+          <div class="gris text-center bg-secondary col-xl-3 order-xl-1 col-lg-3 order-lg-1 col-md-3 order-md-1 col-sm-3 col-6">d</div>
         </div>
         <div class="row">
-          <div class="naranja col-xl-3 col-lg-3 col-md-3 col-sm-6 d-none d-sm-block">:(</div>
-          <div class="naranja col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">:D</div>
+          <div class="azulClaro text-white text-center bg-primary w-100 d-none d-xl-block d-lg-block d-md-block">Desktop</div>
+        </div>
+        <div class="row">
+          <div class="azulClaro text-white text-center bg-primary w-100 d-block d-sm-none">Mobile</div>
+        </div>
+        <div class="row">
+          <div class="naranja text-white text-center bg-warning col-xl-3 order-xl-2 col-lg-3 order-lg-2 col-md-3 order-md-2 col-sm-6 col-12">:D</div>
+          <div class="naranja text-white text-center bg-warning col-xl-3 offset-xl-3 order-xl-1 col-lg-3 offset-lg-3 order-lg-1 col-md-3 offset-md-3 order-md-1 col-sm-6 d-none d-sm-block">:(</div>
         </div>
 
 
         <div class="row">
-          <div class="pie w-100">Footer</div>
+          <div class="pie text-white text-center w-100 d-none d-sm-block bg-success">Footer</div>
         </div>
       </div>
 
