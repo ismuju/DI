@@ -2,6 +2,16 @@
 <html>
 <head>
     <title>Mi centro</title>
+    <script type="text/javascript">
+      function mute(){
+        var sonido = document.getElementById('player').muted;
+        if (sonido === true){
+          document.getElementById('player').muted = false;
+        }else{
+          document.getElementById('player').muted = true;
+        }
+      }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--JS Popper-->
@@ -150,7 +160,7 @@
                           <i class="fa fa-pause-circle-o fa-3x" aria-hidden="true" onclick="document.getElementById('player').pause();"></i>
                           <i class="fa fa-volume-up fa-3x" aria-hidden="true" onclick="document.getElementById('player').volume += 0.1;"></i>
                           <i class="fa fa-volume-down fa-3x" aria-hidden="true" onclick="document.getElementById('player').volume -= 0.1;"></i>
-                          <i class="fa fa-volume-off fa-3x" aria-hidden="true" onclick="document.getElementById('player').volume == 0;"></i>
+                          <i class="fa fa-volume-off fa-3x" aria-hidden="true" onclick="mute();"></i>
                         </div>
                       </div>
                       <p>Si lo prefieres, sigue nuestro canal de Youtube donde emitiremos cada semana, el video del tema más demandado. El video de esta semana es el siguiente:
@@ -171,7 +181,15 @@
                       <p>DAW y ASIR son dos de los estudios ofertados</p>
                       <p>En la asignatura de Diseño de Interfaces Web aprenderás cosas como esta: Dentro video!</p>
                       <div>
-                        ----> Aquí va el video HTML5
+                        <figure>
+                          <figcaption>Ejemplo inserción HTML5</figcaption>
+                          <video controls>
+                            <source src="FormatosImagen.mp4" type="video/mp4">
+                            <source src="FormatosImagen.mov" type="video/mov">
+                            <source src="FormatosImagen.avi" type="video/avi">
+                            Tu navegador no soporta este contenido
+                          </video>
+                        </figure>
                       </div>
                   </article>
                   <article>

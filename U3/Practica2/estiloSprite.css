@@ -24,18 +24,22 @@ article h1 i{
 
 .fa-facebook-official{
   color: 	#3b5998;
+  border-radius: 25px;
 }
 
 .fa-linkedin-square{
   color: 	#4875B4;
+  border-radius: 25px;
 }
 
 .fa-twitter-square{
   color: #33CCFF;
+  border-radius: 25px;
 }
 
 .fa-pinterest-square{
   color: #cb2027;
+  border-radius: 25px;
 }
 
 i:hover{
