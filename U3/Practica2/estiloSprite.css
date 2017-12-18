@@ -8,3 +8,107 @@ article h1 i{
   height: 30px;
   width: 39px;
 }
+
+
+.icon-estudios {
+  background-position:0 -60px;
+  height: 30px;
+  width: 44px;
+}
+
+.icon-contacto {
+  background-position:0 -90px;
+  height: 30px;
+  width: 39px;
+}
+
+.fa-facebook-official{
+  color: 	#3b5998;
+}
+
+.fa-linkedin-square{
+  color: 	#4875B4;
+}
+
+.fa-twitter-square{
+  color: #33CCFF;
+}
+
+.fa-pinterest-square{
+  color: #cb2027;
+}
+
+i:hover{
+  color: black;
+}
+
+.fa{
+  padding-right:10px;
+}
+
+.caja{
+  text-align: center;
+  width: 270px;
+  border: 1px solid black;
+}
+
+
+.social {
+  padding: 0px;
+  margin: 0px;
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left:  0; /* Establecemos la barra en la izquierda */
+	top: 250px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 9000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+	.social li {
+		list-style: none;
+	}
+
+	.social li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+
+	.social li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+	.social li .icon-twitter {background: #00abf0;}
+	.social li .icon-linkedin {background: #4875B4;}
+	.social li .icon-pinterest {background: #ae181f;}
+
+	.social li a:hover {
+		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding-right: 60px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+
+
+  video{
+      /*Ocupa el 100% del contenedor (eso es el 50% de la página)*/
+      width:100%;
+      height: auto;
+      /*La instrucción siguiente pone un límite superior de 560px*/
+      /*max-width:560px;*/
+  }
+
+  /** Iframe para poner videos de Plataformas **/
+  /* El div videoIframe es el contenedor que con el padding-top crea el tamaño del vídeo */
+  .videoIframe{
+      height:0px;
+      width:100%;
+      padding-top:56.25%; /* Relación: 16/9 = 56.25% */
+      position:relative;
+  }
+  /* El iframe se adapta al tamaño del contenedor que tendrá el ratio adecuado */
+  .videoIframe iframe{
+      position:absolute;
+      height:100%;
+      width:100%;
+      top:0px;
+      left:0px;
+  }

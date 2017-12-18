@@ -21,6 +21,8 @@
     <!--Estilo para los Sprites de los titulares-->
     <link rel="stylesheet" href="estiloSprite.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
       /* Estilos base de la página */
       body{
@@ -62,9 +64,18 @@
 </head>
 
 <body>
+  <div id="contenido">
+    <div class="social">
+      <li><a href="http://www.facebook.com/falconmasters" target="_blank" class="icon-facebook fa fa-facebook-official fa-1x"></a></li>
+      <li><a href="http://www.googleplus.com/falconmasters" target="_blank" class="icon-linkedin fa fa-linkedin-square fa-1x"></a></li>
+      <li><a href="http://www.twitter.com/falconmasters" target="_blank" class="icon-twitter fa fa-twitter-square fa-1x"></a></li>
+      <li><a href="http://www.pinterest.com/falconmasters" target="_blank" class="icon-pinterest fa fa-pinterest-square fa-1x"></a></li>
+
+
+  </div>
   <div class="container-fluid">
     <!-- inserta aquí el div container-fluid para que ocupe toda la página-->
-    <div id="contenido">
+
       <div class="row">
         <header class="w-100 sticky-top">
             <!-- Inserta el menú, debes tener en cuenta que el menú deberá ocupar todo el ancho de la pantalla siempre, el color que usaremos será
@@ -127,16 +138,36 @@
                       <h1><i class="icon-novedades"></i>Novedades</h1>
                       <p>Conoce la nueva emisora de nuestro instituto en la que podrás solicitar temas como el siguiente:</p>
                       <div>
-                        ---> Aquí va el audio
+                        <audio controls="controls" preload="auto" >
+                          <source src="chala.mp3" type="audio/mpeg" />
+                          <source src="chala.ogg" type="audio/ogg" />
+                          El navegador NO soporta el audio
+                        </audio>
+
+                        <audio id="player" src="chala.mp3"></audio>
+                        <div class="caja">
+                          <i class="fa fa-play-circle-o fa-3x" aria-hidden="true" onclick="document.getElementById('player').play();"></i>
+                          <i class="fa fa-pause-circle-o fa-3x" aria-hidden="true" onclick="document.getElementById('player').pause();"></i>
+                          <i class="fa fa-volume-up fa-3x" aria-hidden="true" onclick="document.getElementById('player').volume += 0.1;"></i>
+                          <i class="fa fa-volume-down fa-3x" aria-hidden="true" onclick="document.getElementById('player').volume -= 0.1;"></i>
+                          <i class="fa fa-volume-off fa-3x" aria-hidden="true" onclick="document.getElementById('player').volume == 0;"></i>
+                        </div>
                       </div>
                       <p>Si lo prefieres, sigue nuestro canal de Youtube donde emitiremos cada semana, el video del tema más demandado. El video de esta semana es el siguiente:
                       </p>
                       <div>
-                        ---> Aquí va el video embebido de la plataforma de vídeos
+                        <div class="contenedorIframe">
+                          <figure>
+                            <figcaption>Ejemplo inserción iframe Youtube</figcaption>
+                            <div class="videoIframe">
+                              <iframe src="https://www.youtube.com/embed/BnO3nijfYmU" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                          </figure>
+                        </div>
                       </div>
                     </article>
                     <article>
-                      <h1>Estudios ofertados</h1>
+                      <h1><i class="icon-estudios"></i>Estudios ofertados</h1>
                       <p>DAW y ASIR son dos de los estudios ofertados</p>
                       <p>En la asignatura de Diseño de Interfaces Web aprenderás cosas como esta: Dentro video!</p>
                       <div>
@@ -144,7 +175,7 @@
                       </div>
                   </article>
                   <article>
-                    <h1>Contactar</h1>
+                    <h1><i class="icon-contacto"></i>Contactar</h1>
                     <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper mauris nisl, ac euismod erat dictum
                         vel. Nunc lobortis, lectus vitae pulvinar pellentesque, eros sapien posuere lacus, et eleifend risus
@@ -165,7 +196,15 @@
       <!--El ancho debe ocupar el 100% y es de color de fondo bg-dark y de color de texto text-white-->
       <footer class="w-100 bg-dark text-center">
         <p class="text-white">Diseño de interfaces web: Bootstrap &copy;</p>
-        ---> Aquí va el menú de iconos de RRSS
+        <ul>
+          <i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i>
+          <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+          <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+          <i class="fa fa-pinterest-square fa-3x" aria-hidden="true"></i>
+        </ul>
+
+
+
       </footer>
     </div>
   </div>
