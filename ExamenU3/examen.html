@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases de música</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Risque" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style media="screen">
+
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body{
+        text-align: center;
+        font-family: 'Risque';
+      }
+
+      .titulo{
+        margin-top: 2%;
+        font-size: 3em;
+      }
+
+      .contacto{
+        margin-top: 5%;
+        font-size: 2em;
+      }
+
+      picture>img{
+        width: 100%;
+        height: 100%;
+      }
+
+      video{
+        width:100%;
+        height: auto;
+        max-width:560px;
+      }
+
+
+      .videoIframe{
+        margin-top: 3%;
+        height:0px;
+        width:75%;
+        padding-top:56.25%;
+        position:relative;
+        margin:auto;
+      }
+
+
+      .videoIframe iframe{
+        position:absolute;
+        height:100%;
+        width:100%;
+        top:0px;
+        left:0px;
+      }
+
+      .contenedorIframe{
+        width: 100%;
+        max-width:640px;
+        margin:auto;
+      }
+
+      a{
+        font-size: 4em;
+        color: black;
+      }
+
+      a:hover{
+        color: blue;
+      }
+
+    </style>
+  </head>
+  <body>
+    <p class="titulo" >Academia de música Mozart</p>
+
+    <picture>
+      <source media="(min-width: 1200px)" srcset="piano-w1366.jpg">
+      <source media="(min-width: 768px)" srcset="piano-w1200.jpg">
+      <img src="piano-w768.jpg" alt="Piano">
+    </picture>
+
+
+    <div class="contenedorIframe">
+      <figure>
+        <div class="videoIframe">
+          <iframe src="https://www.youtube.com/embed/88JWtnZqKVI?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </figure>
+    </div>
+
+    <p class="contacto" >Contacta con nosotros:</p>
+    <p><a HREF="mailto:usuario@dominio.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></p>
+    <p><a href="tel:555123123"><i class="fa fa-phone" aria-hidden="true"></i></a></p>
+
+
+  </body>
+</html>
