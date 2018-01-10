@@ -8,6 +8,8 @@
 	$(document).ready(function() {
 		//Aquí puedes programar con JQuery
 		$("p").html("Esto es un p").width(200).addClass("importante").css("color","red");
+		var alumno = $(document.createElement("div")).addClass("alumno").attr("id","al12345").html("Alumno 12345");
+		$("body").append(alumno);
 	});
 </script>
 </head>
