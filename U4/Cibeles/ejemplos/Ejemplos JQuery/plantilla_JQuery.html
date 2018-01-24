@@ -7,14 +7,16 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		//Aquí puedes programar con JQuery
-		$("p").html("Esto es un p").width(200).addClass("importante").css("color","red");
-		var alumno = $(document.createElement("div")).addClass("alumno").attr("id","al12345").html("Alumno 12345");
+		$("p").html("Esto es un p").width(200).addClass("importante").css({"color":"red","font-style":"italic"});
+		$("p").on("click",function(){
+			$("p").hide();
+		})
+		var alumno = $(document.createElement("div")).addClass("alumno").attr("id", "al12345").html("<p>Alumno 12345</p>").css("font-style","italic");
 		$("body").append(alumno);
 	});
 </script>
 </head>
 <body>
-	<p></p>
 	<p></p>
 	<p></p>
 	<p></p>
