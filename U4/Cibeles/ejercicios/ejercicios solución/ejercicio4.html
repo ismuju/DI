@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Menú desplegable con jQuery</title>
+
+<style type="text/css">
+ul.menu {
+ margin-top: 38px;
+ list-style-type:none;
+ }
+ .menu li {
+ line-height:18px;
+ font-size:13px;
+ }
+ .menu li a {
+ color: #000;
+ text-transform:uppercase;
+ padding: 5px 20px;
+ text-decoration:none;
+ }
+ .menu li ul {
+ width: 240px;
+ padding:0;
+ list-style-type:none;
+ }
+ .menu li ul li {
+ width: 240px;
+ border: 1px solid #9c0101;
+ border-top:none;
+ padding: 10px 20px;
+ }
+ .menu li ul li:first-child {
+ border-top: 1px solid #9c0101;
+ }
+.menu li ul li a {
+ width: 240px;
+ margin: 0;
+ padding:0;
+ }
+.menu li ul li a:hover {
+ width: 240px;
+ margin: 0;
+ color: #9c0101;
+ background:none;
+ }
+</style>
+
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $(".submenu").hide();
+  $(".desplegable").click(function(){
+    $(this).next().slideToggle(300);
+   });
+});
+</script>
+
+</head>
+
+<body>
+<h2 style="text-align:center"> Menú desplegable con jQuery</h2>
+<ul class="menu">
+   <li><a class="desplegable" href="#">Inicio</a>
+      <ul class="submenu">
+         <li><a href="#">Post 1</a></li>
+         <li><a href="#">Post 2</a></li>
+         <li><a href="#">Post 3</a></li>
+      </ul>
+   </li>
+   <li><a class="desplegable" href="#">Ejemplos</a>
+      <ul class="submenu">
+         <li><a href="#">Entrantes </a></li>
+         <li><a href="#">Primeros</a></li>
+      </ul>
+   </li>
+   <li><a href="#">Contacto</a></li>
+</ul>
+</body>
+</html>

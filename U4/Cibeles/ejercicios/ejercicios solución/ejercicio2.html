@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 4</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("h1").css({"border":"2px solid gray","text-align":"center"});
+        $(".contenedor").css("text-align","center").hide();
+        $("img").width(400);
+        var ancho = 400;
+        var texto = "despliega";
+        $("h1").click(function(){
+          $(".contenedor").slideToggle();
+          if (texto == "despliega"){
+            texto = "pliega";
+          }else{
+            texto = "despliega";
+          }
+          $("h1").text("Haz click aquí y la imagen se " + texto);
+        });
+        $("#masAncho").click(function(){
+          ancho += 20;
+          $("img").width(ancho);
+        });
+        $("#menosAncho").click(function(){
+          ancho -= 20;
+          $("img").width(ancho);
+        });
+    });
+    </script>
+  </head>
+  <body>
+    <h1>Haz click aquí y la imagen se despliega</h1>
+      <div class="contenedor">
+        <img src="mundo.jpg">
+        <button id="masAncho">+</button>
+        <button id="menosAncho">-</button>
+      </div>
+  </body>
+</html>
